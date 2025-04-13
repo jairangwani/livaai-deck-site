@@ -11,7 +11,12 @@
       gtag('js', new Date());
       gtag('config', 'G-83QB86V7YZ');
 
-      // Faster redirect (800ms)
+      // Custom redirect event with source for d.livaai.co
+      gtag('event', 'redirect_to_pdf', {
+        source: 'deck_subdomain'
+      });
+
+      // Redirect after short delay
       setTimeout(() => {
         window.location.href = "https://public-liva.s3.us-east-1.amazonaws.com/LIVA+-+Deck.pdf";
       }, 800);
